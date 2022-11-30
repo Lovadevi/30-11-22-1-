@@ -11,6 +11,7 @@ saq=int(input('enter salt quantity:'))
 dq=int(input('enter dal quantity:'))
 pq=int(input('enter pepper quantity:'))
 fq=int(input('enter flour quantity:'))
+coupon=input("enter coupon code:")
 bill=(sq*sugar)+(saq*salt)+(dq*dal)+(pq*pepper)
 +(fq*flour)
 if bill>3000:
@@ -23,8 +24,23 @@ elif bill>500:
    tax=bill*15/100
 else:
    tax=100
-bill=bill+tax
+if coupon=='DIWALI' and bill>=5000:
+    dis=bill*10/100
+elif coupon=='DIWALI' and bill>=3000:
+    dis=bill*6/100
+elif coupon=='DIWALI' and bill>=1000:
+    dis=bill*4/100
+elif coupon=='CHRISMAS' and bill>=3000:
+    dis=bill*20/100
+elif coupon=='CHRISMAS' and bill>=2000:
+    dis=bill*10/100
+elif coupon=='CHRISMAS' and bill>=1000:
+    dis=bill*5/100
+else:
+    dis=0
+bill=bill+tax-dis
 print("customer phno:",cphno)
 print("customer name:",name)
 print("tax:",tax)
+print("discount:",dis)
 print("bill:",bill)
