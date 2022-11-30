@@ -1,0 +1,30 @@
+sugar=200
+salt=150
+dal=300
+pepper=180
+flour=400
+cphno=input("enter customer phone number:")
+name=input("enter customer name:")
+address=input("enter customer address:")
+sq=int(input("enter sugar quantity:"))
+saq=int(input("enter salt quantity:"))
+dq=int(input("enter dal quantity:"))
+pq=int(input("enter pepper quantity:"))
+fq=int(input("enter flour quantity:"))
+bill=(sq*sugar)+(saq*salt)+(dq*dal)+(pq*pepper)
++(fq*flour)
+if bill>3000:
+   tax=bill*5/100
+elif bill>2000:
+   tax=bill*7/100
+elif bill>1000:
+   tax=bill*10/100
+elif bill>500:
+   tax=bill*15/100
+else:
+   tax=100
+bill=bill+tax
+print("customer phno:",cphno)
+print("customer name:",name)
+print("tax:",tax)
+print("bill:",bill)
