@@ -3,14 +3,14 @@ salt=150
 dal=300
 pepper=180
 flour=400
-cphno=input("enter customer phone number:")
-name=input("enter customer name:")
-address=input("enter customer address:")
-sq=int(input("enter sugar quantity:"))
-saq=int(input("enter salt quantity:"))
-dq=int(input("enter dal quantity:"))
-pq=int(input("enter pepper quantity:"))
-fq=int(input("enter flour quantity:"))
+cphno=input('enter customer phone number:')
+name=input('enter customer name:')
+address=input('enter customer address:')
+sq=int(input('enter sugar quantity:'))
+saq=int(input('enter salt quantity:'))
+dq=int(input('enter dal quantity:'))
+pq=int(input('enter pepper quantity:'))
+fq=int(input('enter flour quantity:'))
 bill=(sq*sugar)+(saq*salt)+(dq*dal)+(pq*pepper)
 +(fq*flour)
 if bill>3000:
